@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "Picture.h"
+#import "PictureCollectionViewCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property NSArray *pictures;
 
 @end
 
@@ -16,12 +20,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+    Picture *cats = [[Picture alloc] initWithImage:[UIImage imageNamed:@"cats"] withFrameColor:[UIColor grayColor]];
+    Picture *pallasCat = [[Picture alloc] initWithImage:[UIImage imageNamed:@"poppies"] withFrameColor:[UIColor redColor]];
+    Picture *poppies = [[Picture alloc] initWithImage:[UIImage imageNamed:@"pallasCat"] withFrameColor:[UIColor brownColor]];
+    Picture *nationalVelvet = [[Picture alloc] initWithImage:[UIImage imageNamed:@"nationalVelvet"] withFrameColor:[UIColor purpleColor]];
+    Picture *neckBrace = [[Picture alloc] initWithImage:[UIImage imageNamed:@"neckBrace"] withFrameColor:[UIColor blueColor]];
+
+    self.pictures = @[cats, pallasCat, poppies, nationalVelvet, neckBrace];
+    NSLog(@"viewDidLoad ending");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"creating cell...");
+    PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCellID" forIndexPath:indexPath];
+
+    Picture *picture = [self.pictures objectAtIndex:indexPath.row];
+    cell.pictureCellImageView.image = picture.image;
+
+    return cell;
+
 }
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    NSLog(@"pictures.count == %li", self.pictures.count);
+    return self.pictures.count;
+}
+
 
 @end
