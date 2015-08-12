@@ -14,8 +14,9 @@
 		C42B76991B602BEC0015C1B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42B76981B602BEC0015C1B6 /* Images.xcassets */; };
 		C42B769C1B602BEC0015C1B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B769A1B602BEC0015C1B6 /* LaunchScreen.xib */; };
 		C42B76A81B602BEC0015C1B6 /* HallOfFramesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C42B76A71B602BEC0015C1B6 /* HallOfFramesTests.m */; };
-		C42B76B31B6034800015C1B6 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = C42B76B21B6034800015C1B6 /* Picture.m */; };
-		C42B76B91B603EEE0015C1B6 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C42B76B81B603EEE0015C1B6 /* PictureCollectionViewCell.m */; };
+		C49483251B782CB2009FAFE9 /* CustomizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49483241B782CB2009FAFE9 /* CustomizationView.xib */; };
+		C49483281B782CEF009FAFE9 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49483271B782CEF009FAFE9 /* CustomView.m */; };
+		C494832B1B78DA7F009FAFE9 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C494832A1B78DA7F009FAFE9 /* PictureCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,11 @@
 		C42B76A11B602BEC0015C1B6 /* HallOfFramesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HallOfFramesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B76A61B602BEC0015C1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42B76A71B602BEC0015C1B6 /* HallOfFramesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HallOfFramesTests.m; sourceTree = "<group>"; };
-		C42B76B11B6034800015C1B6 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
-		C42B76B21B6034800015C1B6 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
-		C42B76B71B603EEE0015C1B6 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
-		C42B76B81B603EEE0015C1B6 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
+		C49483241B782CB2009FAFE9 /* CustomizationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizationView.xib; sourceTree = "<group>"; };
+		C49483261B782CEF009FAFE9 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		C49483271B782CEF009FAFE9 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		C49483291B78DA7F009FAFE9 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		C494832A1B78DA7F009FAFE9 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +93,12 @@
 				C42B76901B602BEC0015C1B6 /* AppDelegate.m */,
 				C42B76921B602BEC0015C1B6 /* ViewController.h */,
 				C42B76931B602BEC0015C1B6 /* ViewController.m */,
+				C49483291B78DA7F009FAFE9 /* PictureCollectionViewCell.h */,
+				C494832A1B78DA7F009FAFE9 /* PictureCollectionViewCell.m */,
+				C49483241B782CB2009FAFE9 /* CustomizationView.xib */,
 				C42B76951B602BEC0015C1B6 /* Main.storyboard */,
-				C42B76B71B603EEE0015C1B6 /* PictureCollectionViewCell.h */,
-				C42B76B81B603EEE0015C1B6 /* PictureCollectionViewCell.m */,
-				C42B76B11B6034800015C1B6 /* Picture.h */,
-				C42B76B21B6034800015C1B6 /* Picture.m */,
+				C49483261B782CEF009FAFE9 /* CustomView.h */,
+				C49483271B782CEF009FAFE9 /* CustomView.m */,
 				C42B76981B602BEC0015C1B6 /* Images.xcassets */,
 				C42B769A1B602BEC0015C1B6 /* LaunchScreen.xib */,
 				C42B768B1B602BEC0015C1B6 /* Supporting Files */,
@@ -211,6 +214,7 @@
 			files = (
 				C42B76971B602BEC0015C1B6 /* Main.storyboard in Resources */,
 				C42B769C1B602BEC0015C1B6 /* LaunchScreen.xib in Resources */,
+				C49483251B782CB2009FAFE9 /* CustomizationView.xib in Resources */,
 				C42B76991B602BEC0015C1B6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,11 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42B76B31B6034800015C1B6 /* Picture.m in Sources */,
-				C42B76B91B603EEE0015C1B6 /* PictureCollectionViewCell.m in Sources */,
+				C494832B1B78DA7F009FAFE9 /* PictureCollectionViewCell.m in Sources */,
 				C42B76941B602BEC0015C1B6 /* ViewController.m in Sources */,
 				C42B76911B602BEC0015C1B6 /* AppDelegate.m in Sources */,
 				C42B768E1B602BEC0015C1B6 /* main.m in Sources */,
+				C49483281B782CEF009FAFE9 /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +432,7 @@
 				C42B76AD1B602BEC0015C1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C42B76AE1B602BEC0015C1B6 /* Build configuration list for PBXNativeTarget "HallOfFramesTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +441,7 @@
 				C42B76B01B602BEC0015C1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

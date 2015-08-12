@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-bW-eFA">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-bW-eFA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IU3-UU-c0U">
-                                    <size key="itemSize" width="306" height="269"/>
+                                    <size key="itemSize" width="316.5" height="276"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -29,17 +30,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="306" height="269"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-ZI-ecC">
-                                                    <rect key="frame" x="7" y="17" width="292" height="239"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-ZI-ecC">
+                                                    <rect key="frame" x="23" y="18" width="270" height="240"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="VcY-ZI-ecC" firstAttribute="top" secondItem="wUB-3g-AyG" secondAttribute="topMargin" constant="10" id="AsC-gj-XnX"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="VcY-ZI-ecC" secondAttribute="bottom" constant="10" id="Qpa-Iv-ppE"/>
+                                            <constraint firstAttribute="centerX" secondItem="VcY-ZI-ecC" secondAttribute="centerX" id="Z52-ur-EJM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="VcY-ZI-ecC" secondAttribute="trailing" constant="15" id="gEq-GF-803"/>
+                                            <constraint firstItem="VcY-ZI-ecC" firstAttribute="leading" secondItem="wUB-3g-AyG" secondAttribute="leadingMargin" constant="15" id="qvl-Pk-hBz"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="pictureCellImageView" destination="VcY-ZI-ecC" id="hGT-nv-4Bc"/>
+                                            <outlet property="pictureCellImageView" destination="VcY-ZI-ecC" id="VNC-Ek-k2a"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -50,11 +58,20 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mTo-bW-eFA" secondAttribute="bottom" id="0KV-bf-meu"/>
+                            <constraint firstItem="mTo-bW-eFA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="OES-8Y-vQP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mTo-bW-eFA" secondAttribute="trailing" constant="-16" id="egd-PH-1FK"/>
+                            <constraint firstItem="mTo-bW-eFA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ixs-Gh-GHE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pictureCollectionView" destination="mTo-bW-eFA" id="tDt-1w-FhQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="310"/>
+            <point key="canvasLocation" x="389" y="182"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
