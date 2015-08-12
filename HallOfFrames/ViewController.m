@@ -40,7 +40,6 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"creating cell...");
     PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCellID" forIndexPath:indexPath];
     PictureCollectionViewCell *image = [self.pictures objectAtIndex:indexPath.row];
     cell.delegate = self;
